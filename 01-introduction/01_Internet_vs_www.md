@@ -28,6 +28,21 @@ pages.
 The WWW relies on the Internet to function, but the Internet also supports many other services beyond the Web.
 
 ```javascript
+
 console.log("hello")
 
 ```
+
+```kts
+dependencies {
+  implementation("org.jetbrains:markdown:<version>")
+}
+```
+
+```kotlin
+val src = "Some *Markdown*"
+val flavour = CommonMarkFlavourDescriptor()
+val parsedTree = MarkdownParser(flavour).buildMarkdownTreeFromString(src)
+val html = HtmlGenerator(src, parsedTree, flavour).generateHtml()
+```
+
