@@ -1,3 +1,14 @@
+# UNIT 1 - Introduction to Frontend Tools
+
+- [UNIT 1 - Introduction to Frontend Tools](#unit-1---introduction-to-frontend-tools)
+  - [1. Difference Between the Internet and the WWW](#1-difference-between-the-internet-and-the-www)
+    - [The Internet === The WWW ??](#the-internet--the-www-)
+    - [The Internet:](#the-internet)
+    - [The World Wide Web (WWW):](#the-world-wide-web-www)
+    - [Summary:](#summary)
+  - [2. Web Architecture](#2-web-architecture)
+
+
 ## 1. Difference Between the Internet and the WWW
 
 ### The Internet === The WWW ??
@@ -27,22 +38,12 @@ pages.
 
 The WWW relies on the Internet to function, but the Internet also supports many other services beyond the Web.
 
-```javascript
 
-console.log("hello")
 
-```
+## 2. Web Architecture
 
-```kts
-dependencies {
-  implementation("org.jetbrains:markdown:<version>")
-}
-```
-
-```kotlin
-val src = "Some *Markdown*"
-val flavour = CommonMarkFlavourDescriptor()
-val parsedTree = MarkdownParser(flavour).buildMarkdownTreeFromString(src)
-val html = HtmlGenerator(src, parsedTree, flavour).generateHtml()
-```
-
+The most common architecture is client/server. 
+ - A **client** is a service consumer. The web browser on our device acts as a client. 
+ - A **server** is one or more processes hosted on machines that provide these services."
+ 
+ ![Client/server Architecture](img/01_web_architecture.png)
