@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="add-car">Add Car</button>
+
+
+  <script type="module">
+    //import { createCar } from './api-cars.js';
+
+    const URLCars = 'http://localhost:3000/cars';
+    const addCarBtn = document.getElementById("add-car");
+
+    addCarBtn.addEventListener("click", init)
+
+    async function init() {
+      const car = {
+        make: "Ford",
+        model: "Mustang",
+        year: 1967,
+        color: "Red",
+        price: 30000
+      };
+
+      const response = await fetch(URLCars, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(car)
+      });
+      /*   if (!response.ok) {
+          throw new Error('Error: Failed to add car.');
+        } */
+      const data = await response.json();
+      console.log(data);
+
+    }
+
+  </script>
+</body>
+
+</html>

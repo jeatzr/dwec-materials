@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Elements</title>
+
+  <link rel="stylesheet" href="00-style.css">
+</head>
+
+<body>
+  <div class="container">
+    <form action="./datows.php" method="get">
+      <!-- It's a good idea to group the label and input control within the same div,
+            and ensure that the 'for' attribute of the label matches the 'id' of the input.
+            The 'name' property will be used to send the value. -->
+
+      <h2>Traditional HTML Input Controls</h2>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" autofocus>
+      </div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city" value="Toledo" disabled>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+      </div>
+      <div class="form-group inline-group">
+        <input type="checkbox" name="terms" id="terms" required>
+        <label for="terms">Accept terms and conditions</label>
+
+      </div>
+      <div class="form-group inline-group">
+        <input type="checkbox" name="newsletter" id="newsletter">
+        <label for="newsletter">Receive newsletter</label>
+
+      </div>
+      <fieldset class="form-group inline-group">
+        <legend>What is your favorite meal</legend>
+        <ul>
+          <li>
+            <input type="radio" id="soup" name="meal" value="soup" checked>
+            <label for="soup">Soup</label>
+          </li>
+          <li>
+            <input type="radio" id="curry" name="meal" value="curry">
+            <label for="curry">Curry</label>
+          </li>
+          <li>
+            <input type="radio" id="pizza" name="meal" value="pizza">
+            <label for="pizza">Pizza</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <div class="form-group">
+        <label for="fruit">Select a fruit</label>
+        <select name="fruit" id="fruit">
+          <option value="grape">Grape</option>
+          <option value="pineapple" selected>Pineapple</option>
+          <option value="mango">Mango</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="fruit2">Select multiple fruits</label>
+        <select name="fruit2" id="fruit2" multiple>
+          <option value="grape">Grape</option>
+          <option value="pineapple" selected>Pineapple</option>
+          <option value="mango">Mango</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="browser">Choose a browser from this list:</label>
+        <input list="browsers" name="browser" id="browser" />
+        <datalist id="browsers">
+          <option value="Chrome">
+          <option value="Firefox">
+          <option value="Internet Explorer">
+          <option value="Opera">
+          <option value="Safari">
+          <option value="Microsoft Edge">
+        </datalist>
+      </div>
+
+      <div class="form-group">
+        <label for="file">Upload file (image only):</label>
+        <input type="file" name="file" id="file" accept="image/*" multiple>
+      </div>
+
+      <div class="form-group">
+        <button type="button">Anonymous button</button>
+        <input type="button" value="Another anonymous button">
+      </div>
+
+      <div class="form-group">
+        <label for="life_story">Tell me about yourself:</label>
+        <textarea name="life_story" id="life_story" rows="10"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" id="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

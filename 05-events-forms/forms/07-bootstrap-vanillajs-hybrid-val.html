@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap and Custom Validation</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .invalid-feedback {
+      display: none;
+    }
+
+    input.is-invalid+.invalid-feedback {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="form-container">
+    <form id="contactForm" class="needs-validation" novalidate>
+      <h1>Bootstrap/Vanilla JS Hybrid Validation</h1>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+        <div class="invalid-feedback">Name is required and must be at least 2 characters long.</div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+        <div class="invalid-feedback">Please provide a valid email address.</div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+        <div class="invalid-feedback">Password is required and must be at least 6 characters long.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        var form = document.getElementById('contactForm');
+
+        form.addEventListener('submit', function (event) {
+          var isValid = true;
+
+          // Custom validation logic
+          const name = document.getElementById('name');
+          const email = document.getElementById('email');
+          const password = document.getElementById('password');
+
+          // Example custom validation
+          if (name.value.trim().length < 2) {
+            name.classList.add('is-invalid');
+            isValid = false;
+          } else {
+            name.classList.remove('is-invalid');
+          }
+
+          if (!email.validity.valid) {
+            email.classList.add('is-invalid');
+            isValid = false;
+          } else {
+            email.classList.remove('is-invalid');
+          }
+
+          if (password.value.length < 6) {
+            password.classList.add('is-invalid');
+            isValid = false;
+          } else {
+            password.classList.remove('is-invalid');
+          }
+
+          // If the form is invalid, prevent submission
+          if (!isValid) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          // Add Bootstrap validation classes
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

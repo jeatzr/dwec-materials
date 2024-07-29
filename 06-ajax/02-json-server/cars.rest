@@ -1,0 +1,48 @@
+### show all cars
+GET http://localhost:3000/cars HTTP/1.1
+
+### show car with 
+
+GET http://localhost:3000/cars/1 HTTP/1.1
+
+###
+### New car, automatic ID
+POST http://localhost:3000/cars HTTP/1.1
+Content-Type: application/json
+
+{
+  "make": "Fiat",
+  "model": "Tipo",
+  "year": 1990,
+  "color": "White",
+  "price": 3000
+}
+
+##########
+## json server allows duplicated id. 
+## you will need to control it by the frontend
+POST http://localhost:3000/cars HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "1",
+  "make" : "Opel",
+  "model": "Corsa",
+  "year": 2006,
+  "color": "White",
+  "price": 3400
+}
+
+### json-server doesn't control if missing properties
+POST http://localhost:3000/cars HTTP/1.1
+Content-Type: application/json
+
+{
+  "make" : "BMW",
+  "model": "X3"
+}
+
+
+###
+
+DELETE http://localhost:3000/cars/1 HTTP/1.1

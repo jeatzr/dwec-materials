@@ -1,0 +1,60 @@
+{
+  "cars": [
+    {
+      "id": "1",
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2021,
+      "color": "Blue",
+      "price": 24000
+    },
+    {
+      "id": "2",
+      "make": "Honda",
+      "model": "Accord",
+      "year": 2020,
+      "color": "Black",
+      "price": 22000
+    },
+    {
+      "id": "3",
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 2019,
+      "color": "Red",
+      "price": 27000
+    },
+    {
+      "id": "4",
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "year": 2022,
+      "color": "White",
+      "price": 26000
+    },
+    {
+      "id": "5",
+      "make": "BMW",
+      "model": "X3",
+      "year": 2021,
+      "color": "Gray",
+      "price": 43000
+    },
+    {
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 1967,
+      "color": "Red",
+      "price": 30000,
+      "id": "nA0hcL0"
+    },
+    {
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 1967,
+      "color": "Red",
+      "price": 30000,
+      "id": "mLc8bNU"
+    }
+  ]
+}

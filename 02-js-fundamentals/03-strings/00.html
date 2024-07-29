@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con cadenas</title>
+</head>
+<body>
+
+    <script>
+    /*
+     *  Operaciones con cadenas de texto
+     */
+ 
+    //Concatenar texto
+    const saludo = 'Hello' + 'World';
+    console.log(saludo);
+    //Template literals
+    const name = 'Amparo';
+    const apellido = 'García';
+    console.log('Buenas tardes ' + name + ' ' + apellido);
+    console.log(`Buenas tardes ${name} ${apellido}`);
+
+    //typeof
+    console.log(typeof name);
+
+    //.lenght
+    console.log(name.length);
+    //.includes()
+    console.log(name.includes('par'));
+    //.slice(start, end)
+    console.log(name.slice(3,6));
+    //.replace("este texto", "por este otro")
+    console.log(name.replace('paro','plificador'));
+    //.trim()
+    const texto = "   algo  que     quería     "
+    console.log(texto.trim());
+    //.split('.');
+    const geolocation = 'Paseo San Eugenio, 21, 45003, Toledo, Toledo, Spain';
+    console.log(geolocation.split(','))
+    </script>
+</body>
+</html>

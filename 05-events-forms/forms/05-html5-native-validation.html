@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation with Vanilla JS</title>
+  <link rel="stylesheet" href="04-style.css">
+</head>
+
+<body>
+
+  <div class="form-container">
+    <h1>HTML5 Native Validation</h1>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required minlength="2">
+        <div class="error-message">Name is required and must be at least 2 characters long.</div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+        <div class="error-message">Please provide a valid email address.</div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required minlength="6">
+        <div class="error-message">Password is required and must be at least 6 characters long.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+
+</body>
+
+</html>

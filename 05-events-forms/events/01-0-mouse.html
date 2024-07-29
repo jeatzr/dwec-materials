@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Events Example</title>
+  <style>
+    .button-container {
+      margin-bottom: 20px;
+    }
+
+    .button-container button {
+      margin-right: 10px;
+    }
+
+    .coordinates {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Mouse Events on Buttons</h2>
+  <div class="button-container">
+    <button id="btn-click">Click Me</button>
+    <button id="btn-dblclick">Double Click Me</button>
+    <button id="btn-mouseover">Hover Over Me</button>
+    <button id="btn-mouseout">Mouse Out Me</button>
+  </div>
+
+  <h2>Mouse Coordinates</h2>
+  <div class="coordinates">
+    <label for="x-coord">X: </label>
+    <input type="text" id="x-coord" readonly>
+    <label for="y-coord">Y: </label>
+    <input type="text" id="y-coord" readonly>
+  </div>
+
+  <script>
+    // Functions to handle mouse events
+    function handleClick() {
+      alert('Button Clicked!');
+    }
+
+    function handleDoubleClick() {
+      alert('Button Double Clicked!');
+    }
+
+    function handleMouseOver() {
+      alert('Mouse Over Button!');
+    }
+
+    function handleMouseOut() {
+      alert('Mouse Out of Button!');
+    }
+
+    function updateCoordinates(e) {
+      document.getElementById('x-coord').value = e.clientX;
+      document.getElementById('y-coord').value = e.clientY;
+    }
+
+    // Adding event listeners to buttons
+    document.getElementById('btn-click').addEventListener('click', handleClick);
+    document.getElementById('btn-dblclick').addEventListener('dblclick', handleDoubleClick);
+    document.getElementById('btn-mouseover').addEventListener('mouseover', handleMouseOver);
+    document.getElementById('btn-mouseout').addEventListener('mouseout', handleMouseOut);
+
+    // Adding event listener to document to track mouse movement
+    document.addEventListener('mousemove', updateCoordinates);
+  </script>
+</body>
+
+</html>

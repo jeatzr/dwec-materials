@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter characters</title>
+</head>
+
+<body>
+  <form action="">
+    <h2>Filter input and transform to capital letters</h2>
+    <div class="form-group">
+      <label for="passport">Passport: </label>
+      <input type="text" name="passport" id="passport" autofocus>
+    </div>
+    <div class="form-group">
+      <label for="telephon">Telephon:</label>
+      <input type="text" name="telephon" id="telephon" autofocus>
+    </div>
+
+  </form>
+
+  <script>
+
+    const inputPassport = document.querySelector("#passport");
+    const inputTelephon = document.querySelector("#telephon")
+
+    function filterNum(string) { // only numbers 
+      let out = '';
+
+      // Wi will add only valid chars
+      const filter = '1234567890'; // Valid Chars
+
+      for (var i = 0; i < string.length; i++) {
+        // If the char is in the filter string we add this char to the output
+        if (filter.indexOf(string.charAt(i)) != -1) {
+          out += string.charAt(i);
+        }
+      }
+      return out;
+    }
+
+    function filterAlphaNum(string) {//solo letras y numeros
+      let out = '';
+      // Wi will add only valid chars
+      const filter = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-'; // Valid chars
+
+      for (var i = 0; i < string.length; i++) {
+        // If the char is in the filter string we add this char to the output
+        if (filter.indexOf(string.charAt(i)) != -1) {
+          out += string.charAt(i);
+        }
+      }
+      return out;
+    }
+
+    inputTelephon.addEventListener("keyup", function (ev) {
+      console.log(ev.target);
+      ev.target.value = filterNum(ev.target.value);
+    });
+
+    inputPassport.addEventListener("keyup", function (ev) {
+      console.log(ev.target);
+      ev.target.value = filterAlphaNum(ev.target.value);
+      ev.target.value = ev.target.value.toUpperCase();
+    });
+
+  </script>
+
+</body>
+
+</html>

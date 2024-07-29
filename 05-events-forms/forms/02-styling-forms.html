@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Form</title>
+  <link rel="stylesheet" href="02-style.css">
+</head>
+
+<body>
+
+  <div class="form-container">
+    <form id="myForm">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter email">
+        <span id="emailError" class="error-message">Please provide a valid email.</span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Enter password">
+        <span id="passwordError" class="error-message">Password is required.</span>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var email = document.getElementById('email');
+      var password = document.getElementById('password');
+      var emailError = document.getElementById('emailError');
+      var passwordError = document.getElementById('passwordError');
+
+      // Reset error states
+      email.classList.remove('error');
+      password.classList.remove('error');
+      emailError.classList.remove('active');
+      passwordError.classList.remove('active');
+
+      // Simple validation
+      if (!email.value) {
+        email.classList.add('error');
+        emailError.classList.add('active');
+      }
+      if (!password.value) {
+        password.classList.add('error');
+        passwordError.classList.add('active');
+      }
+    });
+  </script>
+
+</body>
+
+</html>

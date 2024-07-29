@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    //var is funcion scoped and it is accessible 
+    //let y const son solo visibles en el scope donde están definidas
+    //const no puede modificar su valor
+
+
+    var globalVar = "I'm accessible from anywhere in the script";
+
+    function testVar() {
+      var functionVar = "I'm accessible within this function only";
+      console.log(globalVar);  // Outputs: I'm accessible from anywhere in the script
+      console.log(functionVar);  // Outputs: I'm accessible within this function only
+    }
+
+    testVar();
+    console.log(globalVar);  // Outputs: I'm accessible from anywhere in the script
+    console.log(functionVar);  // Uncaught ReferenceError: functionVar is not defined
+
+    let adios = "Hasta la vista";
+    const algo = "Algo";
+
+    if (true) {
+      var hola = "Hola, qué tal";
+    }
+
+    console.log(hola);
+    console.log(adios);
+    console.log(algo);
+
+
+    adios = "Sayonara baby";
+    console.log(adios);
+
+
+
+    var num = 5; //variable tradicional. Accesible en todo el script
+    let cadena = "hola"; //variable accessible solo en su "scope" 
+    const booleano = true;  //constante accesible en su "scope"
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop Example</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+    }
+
+    .box {
+      width: 200px;
+      height: 300px;
+      border: 2px dashed #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .draggable {
+      width: 150px;
+      height: 50px;
+      margin: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #000;
+      cursor: grab;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box" id="box1">
+      <div class="draggable" draggable="true" id="item1">Item 1</div>
+      <div class="draggable" draggable="true" id="item2">Item 2</div>
+      <div class="draggable" draggable="true" id="item3">Item 3</div>
+    </div>
+    <div class="box" id="box2">
+      Drop items here
+    </div>
+  </div>
+
+  <script src="06-drag-n-drop.js"></script>
+</body>
+
+</html>

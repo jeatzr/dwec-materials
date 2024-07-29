@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con numbers
+    </title>
+</head>
+<body>
+    <script type="text/javascript">
+    //typeof
+    const num = 20;
+    console.log(typeof num);
+    //NaN
+    const variable = 4 * "holi"; 
+    console.log(variable);
+    console.log(typeof variable);
+    //Infinity
+    const division = 4 / 0;
+    console.log(division);
+    console.log(typeof division);
+    //isNaN
+    const numberstring = "30";
+    const string = "20 años";
+    console.log(isNaN(variable));
+    console.log(isNaN(division));
+    console.log(isNaN("12"));
+    console.log(isNaN(12));
+    console.log(isNaN(numberstring));
+    console.log(isNaN(string));
+    console.log(isNaN(NaN));
+    //toString
+    const number = 100;
+    console.log(number);
+    console.log(number.toString());
+    console.log(typeof number);
+    console.log(typeof number.toString());
+    //toFixed
+    console.log(number.toFixed(2));
+
+    </script>
+</body>
+</html>

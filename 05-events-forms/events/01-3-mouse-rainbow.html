@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.
+  </div>
+  <div class="paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.
+  </div>
+  <div class="paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.
+  </div>
+  <div class="paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.
+  </div>
+  <div class="paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.
+  </div>
+  <div class="paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.
+  </div>
+
+  <script>
+    // In this example we will assign the event handler to several DOM elements
+
+    // This way we would only select one element:
+    // const divs = document.querySelectorAll(".paragraph");
+
+    // This is the way to select all elements of a class
+    const divs = document.querySelectorAll(".paragraph");
+
+    // Declare a function that returns a random number between 0 and a given maximum
+    const getRandomNumber = max => {
+      return Math.round(Math.random() * max);
+    }
+
+    // This function should create a random color and associate it with the background color of the element
+    const changeColor = function (e) {
+      console.log(e);
+      // Create an array of 3 positions that will have the 3 components of a 
+      // random RGB color with the function declared above
+      const color = new Array(getRandomNumber(255), getRandomNumber(255), getRandomNumber(255));
+      // "this" refers to the element that generated the event
+      // The "style" property allows us to modify the element's style
+      // "this" refers to the context which in this case is the DIV element of the event
+
+      // this.style.backgroundColor = `rgb(${color[0]},${color[1]},${color[2]})`;
+      // We can also access the element from the event target
+      e.target.style.backgroundColor = `rgb(${color[0]},${color[1]},${color[2]})`;
+
+      // this === e.target inside an event handler function
+    }
+
+    // This way we can only associate the function to a single element, 
+    // divs.addEventListener("mouseover", changeColor);
+
+    // To associate it with each one we have to iterate over the array of elements
+    divs.forEach(div => {
+      div.addEventListener("mouseover", changeColor);
+    });
+  </script>
+</body>
+
+</html>

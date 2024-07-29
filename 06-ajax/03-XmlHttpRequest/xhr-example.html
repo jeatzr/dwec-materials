@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XMLHttpRequest Example</title>
+</head>
+
+<body>
+  <h1>Fetch Data with XMLHttpRequest</h1>
+  <button id="fetchDataButton">Fetch Data</button>
+  <pre id="responseOutput"></pre>
+
+  <script>
+    document.getElementById('fetchDataButton').addEventListener('click', function () {
+      // Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+
+      // Configure it: GET-request for the URL /users
+      xhr.open('GET', 'https://jsonplaceholder.typicode.com/users', true);
+
+      // Set up a function to handle the response
+      xhr.addEventListener("load", function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          // Parse the JSON response
+          var users = JSON.parse(xhr.responseText);
+
+          // Log the response to the console
+          console.log(users);
+
+          // Display the response in the <pre> element
+          document.getElementById('responseOutput').textContent = JSON.stringify(users, null, 2);
+        } else {
+          console.error('Request failed. Returned status of ' + xhr.status);
+        }
+      });
+
+      // Handle network errors
+      xhr.addEventListener("error", function () {
+        console.error('Request failed.');
+      })
+
+      // Send the request
+      xhr.send();
+    });
+  </script>
+</body>
+
+</html>

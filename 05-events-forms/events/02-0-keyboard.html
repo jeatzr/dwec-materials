@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard Events Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      width: 300px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Keyboard Events Example</h2>
+  <p>Press a key to see the event details.</p>
+  <div id="output">
+    <strong>Last Key Pressed:</strong> <span id="keyName">-</span><br>
+    <strong>Key Code:</strong> <span id="keyCode">-</span><br>
+    <strong>Shift Key:</strong> <span id="shiftKey">-</span><br>
+    <strong>Ctrl Key:</strong> <span id="ctrlKey">-</span><br>
+    <strong>Alt Key:</strong> <span id="altKey">-</span><br>
+  </div>
+
+  <script>
+    const outputDiv = document.getElementById('output');
+
+    // Function to update the output with event details
+    function updateOutput(event) {
+      const keyName = event.key;
+      const keyCode = event.keyCode;
+      const shiftKey = event.shiftKey;
+      const ctrlKey = event.ctrlKey;
+      const altKey = event.altKey;
+
+      document.getElementById('keyName').textContent = keyName;
+      document.getElementById('keyCode').textContent = keyCode;
+      document.getElementById('shiftKey').textContent = shiftKey;
+      document.getElementById('ctrlKey').textContent = ctrlKey;
+      document.getElementById('altKey').textContent = altKey;
+    }
+
+    // Event listeners for keydown and keyup events
+    document.addEventListener('keydown', function (event) {
+      updateOutput(event);
+    });
+
+    document.addEventListener('keyup', function (event) {
+      updateOutput(event);
+    });
+  </script>
+</body>
+
+</html>
