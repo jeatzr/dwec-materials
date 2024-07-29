@@ -56,7 +56,7 @@ Ennumerate and explain each one of the files included in this repo.
     </html>
     ````
 
-9. **Create a new file called `app.js` and add this two lines **
+9. **Create a new file called `app.js` and add this two lines**
 
     ````javascript
     console.log("Hello Console!")
