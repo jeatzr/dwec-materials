@@ -29,7 +29,7 @@ Ennumerate and explain each one of the files included in this repo.
 1. **Install `VSCode` in your computer**.
 2. **Create a new folder called `p1.1-frontend-tools`and open it as a workspace in VSCode. Copy the current `README.md` inside it**.
 3. **What functionalities do the following VSCode extensions add?**
-   - **Bootstrap 4, Font Awesome 4**
+   - **Bootstrap 5 quick Snippets**
    - **Live Server**
    - **Prettier**
    - **Markdown All in One**
@@ -72,13 +72,13 @@ Ennumerate and explain each one of the files included in this repo.
 
 ### Create a simple form with Bootstrap 4. 
 
-13. **At this point, we are going to create a page called `form.html` starting from the `B4-$` template provided by the Bootstrap extension we added. What files does this template include in the html?**
+13. **At this point, we are going to create a page called `form.html` starting from the `Bs5-$` template provided by the Bootstrap extension we added. What files does this template import in the html by default?**
     
-14. **Create a `<div>`with the class `.container`**
+14. **Create a `<div>`with the class `.container` to wrap all the sections in the web page**
   
-15. **Add a standard navigation bar using the `b4-navbar-standard` snippet inside the container**
+15. **Add a standard navigation bar inside the nav area using the `bs5-navbar-standard` snippet inside the container**
 
-16. **Inside the container create a form using Bootstrap to collect data from a new user who wants to register at an academy that offers courses. We can copy code from [Bootstrap Documentation](https://getbootstrap.com/docs/4.0/components/forms/)**. 
+16. **Inside the main area create a form using Bootstrap to collect data from a new user who wants to register at an academy that offers courses. We can copy code from [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/forms/overview/)**. 
 
 ### Install Git, and upload your project to GitHub
 
@@ -94,4 +94,4 @@ Ennumerate and explain each one of the files included in this repo.
     
 22. **Follow the instructions in the command line provided by GitHub to add your files, create the first commit and push it. Notice that in out case we have to add all files to the staged area with `git add .`, not just`git add README.md`** 
     
-23. **To finish the task, submit the GitHub link of your repo.**
+23. **To finish, submit the link of your GH repo to the task in our Classroom.**
