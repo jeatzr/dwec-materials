@@ -4,12 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Validation with Vanilla JS</title>
-    <link rel="stylesheet" href="04-style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-
   <body>
     <div class="form-container">
-      <h1>Vanilla JS Validation</h1>
+      <div class="form-header">
+        <h1>Dark Mode Form</h1>
+        <span id="toggle-theme-btn" class="toggle-theme-btn">
+          <i class="fa-solid fa-sun" title="Switch to Dark Mode"></i>
+        </span>
+      </div>
       <form id="contactForm">
         <div class="form-group">
           <label for="name">Name</label>
@@ -38,6 +49,6 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
-    <script src="04-vanilla-js-validation.js"></script>
+    <script src="main.js" type="module"></script>
   </body>
 </html>

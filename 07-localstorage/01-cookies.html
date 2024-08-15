@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies basic functions</title>
+  </head>
+  <body>
+    <h1>Testing Cookies Functions</h1>
+    <p>Please Inspect the cookies and show the console</p>
+    <script type="module">
+      // importing the cookie management funtions
+      import { setCookie, getCookie, eraseCookie } from "./cookies.js";
+
+      // creating a session cookie in a simple way
+      document.cookie = "sessionCookie=I will die if you close the browser!";
+
+      // Set a cookie with an expiration date
+      const now = new Date();
+      const time = now.getTime();
+      const expireTime = time + 7 * 24 * 60 * 60 * 1000; // 7 days from now
+      now.setTime(expireTime);
+
+      document.cookie = `persistentCookie=I'm persistent!; expires=${now.toUTCString()}; path=/`;
+
+      // Usage examples of the functions
+      setCookie("username", "JohnDoe"); // Session cookie
+      setCookie("username", "JohnDoe", 7); // Persistent cookie for 7 days
+      setCookie("username", "JohnDoe", 7, "/user"); // Persistent cookie for 7 days with path /user
+
+      setCookie("modePreference", "dark", 30); // set another cookie
+
+      // reading cookie values
+      let sessionCookie = getCookie("sessionCookie");
+      let persistentCookie = getCookie("persistentCookie");
+      let username = getCookie("username");
+      let mode = getCookie("modePreference");
+
+      console.log(document.cookie);
+      console.log(`Cookie: sessionCookie=${sessionCookie}`);
+      console.log(`Cookie: persistentCookie=${persistentCookie}`);
+      console.log(`Cookie: username=${username}`);
+      console.log(`Cookie: modePreference=${mode}`);
+
+      eraseCookie("persistentCookie");
+
+      // reading the deleted cookie
+      persistentCookie = getCookie("persistentCookie");
+
+      console.log(document.cookie);
+      console.log(`Cookie: persistentCookie=${persistentCookie}`);
+    </script>
+  </body>
+</html>

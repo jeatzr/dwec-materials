@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DNI Validation</title>
+    <link rel="stylesheet" href="04-style.css" />
+  </head>
+
+  <body>
+    <div class="form-container">
+      <h1>DNI Validation</h1>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="dni">DNI Basic Validation</label>
+          <input type="text" class="form-control" id="dni" name="dni" />
+          <div class="error-message">
+            Name is required and must be at least 2 characters long.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="dni2">DNI Full Validation</label>
+          <input type="text" class="form-control" id="dni2" name="dni2" />
+          <div class="error-message">Please provide a valid email address.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <script>
+      const form = document.getElementById("contactForm");
+      const dni = document.getElementById("dni");
+      const dni2 = document.getElementById("dni2");
+
+      form.addEventListener("submit", (ev) => {
+        ev.preventDefault();
+
+        let valid = true;
+
+        if (isValidDNIBasic(dni.value)) {
+          markFieldAsValid(dni);
+        } else {
+          markFieldAsNotValid(dni, "Input a valid DNI");
+          valid = false;
+        }
+
+        if (isValidDNI(dni2.value)) {
+          markFieldAsValid(dni2);
+        } else {
+          markFieldAsNotValid(
+            dni2,
+            "Input a valid DNI. The letter don't match."
+          );
+          valid = false;
+        }
+
+        if (valid) {
+          form.submit();
+        }
+      });
+
+      ///////////////////////////////
+      /// Validation functions for spanish DNI
+      ////////////////////////////
+
+      // This one only check the regex pattern
+      function isValidDNIBasic(value) {
+        const dni = value.toString().toUpperCase();
+        if (/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKET]$/i.test(dni)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      // This function check if the letter match with te number following the algorithm
+      function isValidDNI(value) {
+        const validChars = "TRWAGMYFPDXBNJZSQVHLCKET";
+        const nifRexp = /^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKET]$/i;
+        const nieRexp = /^[XYZ][0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]$/i;
+        const str = value.toString().toUpperCase();
+
+        if (!nifRexp.test(str) && !nieRexp.test(str)) return false;
+
+        const nie = str
+          .replace(/^[X]/, "0")
+          .replace(/^[Y]/, "1")
+          .replace(/^[Z]/, "2");
+
+        const letter = str.substr(-1);
+        const charIndex = parseInt(nie.substr(0, 8)) % 23;
+
+        if (validChars.charAt(charIndex) === letter) return true;
+
+        return false;
+      }
+
+      ////////////////////////////////////////////
+      // Auxiliary Functions to set a valid or not-valid field
+      ///////////////////////////////////////////
+
+      // This functions set a field as not-valid and adds the error-message
+      function markFieldAsNotValid(
+        element,
+        message = "Invalid field. Insert a valid value."
+      ) {
+        // If we have a custom message we show it. In other case we just show the error-message present in the HTML
+        if (message) {
+          element.parentNode.querySelector(".error-message").textContent =
+            message;
+        }
+        // Adding the class that shows the error-message and adds the red border (css)
+        element.parentNode.classList.add("is-not-valid-field");
+      }
+
+      // This function set a field as valid and hide the error field
+      function markFieldAsValid(element) {
+        element.parentNode.classList.remove("is-not-valid-field");
+      }
+    </script>
+  </body>
+</html>

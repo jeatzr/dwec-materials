@@ -1,3 +1,5 @@
+import { createThemeToggle } from "./themeToggle";
+
 // Is a good practice that all the code is inside 'DOMContentLoaded' or 'load'
 document.addEventListener("DOMContentLoaded", function () {
   // Capture all elements
@@ -77,10 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ///////////////////////////////////////////
 
   // This functions set a field as not-valid and adds the error-message
-  function markFieldAsNotValid(
-    element,
-    message = "Invalid field. Insert a valid value."
-  ) {
+  function markFieldAsNotValid(element, message = "Please, review this field") {
     // If we have a custom message we show it. In other case we just show the error-message present in the HTML
     if (message) {
       element.parentNode.querySelector(".error-message").textContent = message;
@@ -93,4 +92,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function markFieldAsValid(element) {
     element.parentNode.classList.remove("is-not-valid-field");
   }
+
+  // here we will add the logic for the theme toggle button
+  const toggleTheme = document.getElementById("toggle-theme-btn");
+  createThemeToggle(toggleTheme);
 });
