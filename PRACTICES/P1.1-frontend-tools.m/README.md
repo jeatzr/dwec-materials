@@ -42,7 +42,7 @@ Ennumerate and explain each one of the files included in this repo.
 7. **Create an `index.html` file inside your worspace folder.**
 8. **Create the basic html structure using the `!` snippet and change the title to 'Hello World'**
 
-    ````html
+    ```html
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -54,14 +54,14 @@ Ennumerate and explain each one of the files included in this repo.
       
     </body>
     </html>
-    ````
+    ```
 
 9. **Create a new file called `app.js` and add this two lines**
 
-    ````javascript
+    ```js
     console.log("Hello Console!")
     document.body.innerHTML = "<h1>Hello document!<h1>"
-    ````
+    ```
 
 10. **Import the script in your html using one of the techniques explained in class. Explain here the technique, show the code and justify why did you choose this technique**.
 
