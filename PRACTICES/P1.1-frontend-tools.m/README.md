@@ -80,17 +80,17 @@ Ennumerate and explain each one of the files included in this repo.
 
 16. **Inside the main area create a form using Bootstrap to collect data from a new user who wants to register at an academy that offers courses. We can copy code from [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/forms/overview/)**. 
 
-### Install Git, and upload your project to GitHub
+### Install Git, and upload your repository to GitHub
 
 17. **Install [git](https://git-scm.com/) in your computer**.
     
-18. **Init the git project**
+18. **Init the git repository**
     
 19. **Log in to your GitHub account provided by IES Azarquiel**
     
 20. **Follow the teacher on GitHub at the following link: [https://github.com/jeatzr/](https://github.com/jeatzr/)**
     
-21. **Create a new empty project on GitHub named `p1.1-frontend-tools`.**
+21. **Create a new empty repository on GitHub named `p1.1-frontend-tools`.**
     
 22. **Follow the instructions in the command line provided by GitHub to add your files, create the first commit and push it. Notice that in out case we have to add all files to the staged area with `git add .`, not just`git add README.md`** 
     
