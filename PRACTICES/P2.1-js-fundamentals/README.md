@@ -31,13 +31,13 @@ Ennumerate and explain each one of the files included in this repo.
       
       * html:
       ```html
-      <div id="container>
+      <div id="container"></div>
       ```
 
       * JavaScript:
       ```js
       const container = document.getElementById("container");
-      container.innerHTML = "<h1>Welcome to my awesome website for adult people</h1>"s;
+      container.innerHTML = "<h1>Welcome to my awesome website for adult people</h1>";
       ```
    
 3. `03_random.js` Create one arrow function that generates a random number between a minimum and a maximum given number. Use it to calculate 10 random numbers between:
