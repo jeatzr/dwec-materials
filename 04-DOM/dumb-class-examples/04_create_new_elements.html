@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <main></main>
+    <footer></footer>
+
+    <script>
+      // GOOD PRactice!!!
+      // Get the elements that we will need at the begining
+      const footer = document.querySelector("footer");
+      const header = document.querySelector("header");
+      const main = document.querySelector("main");
+
+      // insert new content modifying the innerHTML property
+      footer.innerHTML =
+        "<h2>Footer</h2><p>This is dynamically added content in the footer.</p>";
+
+      // create and append new elements
+      const newH1 = document.createElement("h1");
+      newH1.textContent = "Title of my page";
+      header.appendChild(newH1);
+
+      // lets add some section to the main
+      const section1 = document.createElement("section");
+
+      const paragraph = document.createElement("p");
+      paragraph.textContent =
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nobis reprehenderit. Alias harum tempora, aut omnis minima labore voluptatibus deleniti esse magnam dolor debitis placeat, quaerat vero iste cupiditate temporibus!";
+
+      const newh2 = document.createElement("h2");
+      newh2.textContent = "Title of my section";
+
+      section1.append(newh2, paragraph);
+
+      console.log(section1);
+
+      main.append(section1);
+    </script>
+  </body>
+</html>
