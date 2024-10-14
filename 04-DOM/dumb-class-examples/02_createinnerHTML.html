@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <p id="paragraph"></p>
+
+    <script>
+      const app = document.getElementById("app");
+      const p1 = document.getElementById("paragraph");
+
+      let title = "My beautiful title";
+
+      let paragraph =
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis expedita blanditiis amet eligendi minima! Quod quo doloremque quidem quisquam sunt perferendis nemo non quas atque, temporibus tempore ut libero eaque!";
+
+      app.innerHTML = `
+      <h1>${title}</h1>
+      <p>${paragraph}</p>
+      `;
+
+      p1.textContent = "<strong>This is the content of the paragraph</strong>";
+    </script>
+  </body>
+</html>

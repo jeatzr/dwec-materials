@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="03_style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Title</h1>
+    </div>
+
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>Item 1</li>
+
+    <h1 id="second">Title2</h1>
+
+    <form>
+      <label>Name:</label> <input value="pepe" type="text" />
+      <label>Lastname:</label>
+      <input type="text" />
+    </form>
+
+    <script>
+      const elementsByTagName = document.getElementsByTagName("li");
+
+      const secondHeader = document.getElementById("second");
+      const secondHeader2 = document.querySelector("second");
+
+      const firstHeader = document.querySelector("h1");
+      const allHeaders = document.querySelectorAll("h1");
+
+      console.log(elementsByTagName);
+      console.log(firstHeader);
+
+      for (li of elementsByTagName) {
+        li.classList.add("highlight");
+      }
+
+      for (header of allHeaders) {
+        header.classList.add("red");
+      }
+
+      // access attributes
+
+      const allInputs = document.querySelectorAll("form input");
+      const inputName = allInputs[0];
+      const inputLastName = allInputs[1];
+
+      console.log(allInputs);
+      console.log(inputName);
+      console.log(inputLastName);
+
+      // we can read the property value in two different ways
+      console.log(inputName.value);
+      console.log(inputLastName.getAttribute("value"));
+
+      // we can write the proterperty value in two different ways:
+      inputName.value = "Juan";
+      inputLastName.setAttribute("value", "García");
+
+      // change style
+
+      inputName.style.display = "block";
+      inputName.style.width = "100%";
+
+      // add class
+
+      inputLastName.classList.add("red");
+      inputLastName.classList.add("red-border");
+
+      console.log(inputLastName.classList);
+    </script>
+  </body>
+</html>

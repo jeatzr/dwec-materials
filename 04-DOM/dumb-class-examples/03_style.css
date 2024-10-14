@@ -1,0 +1,11 @@
+.highlight {
+  background-color: yellow;
+}
+
+.red {
+  color: rgb(185, 18, 18);
+}
+
+.red-border {
+  border-color: rgb(185, 18, 18);
+}
