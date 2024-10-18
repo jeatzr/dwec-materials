@@ -44,95 +44,7 @@
     </header>
     <main>
         <div class="row" id="contenedor">
-            <div class="col-sm-6 col-md-4 col-xl-3 d-flex" id="plantilla">
-
-                <div class="card flex-fill ">
-                    <img class="card-img-top" id="imagen"
-                        src="https://kingsleague-cdn.kama.football/account/production/team/image/398917228.png"
-                        alt="Title" />
-
-                    <div class="card-body">
-                        <h5 class="card-title" id="nombre">Equipo de futbooool</h5>
-
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <div class="card-group">
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#mcvideo" aria-expanded="false" aria-controls="mcvideo">Video</button>
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#mcposter" aria-expanded="false"
-                                aria-controls="mcposter">Poster</button>
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#mcpresidente" aria-expanded="false"
-                                aria-controls="mcpresidente">Presidente</button>
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#mcentrenador" aria-expanded="false"
-                                aria-controls="mcentrenador">Entrenador</button>
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#mcmas" aria-expanded="false" aria-controls="mcmas">más</button>
-                            <!-- button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                        data-bs-target=".multi-collapse" aria-expanded="false"
-                        aria-controls="mcvideo mcentrenador mcposter mcpresidente">ocultar todo</button -->
-
-                        </div>
-                    </div>
-                    <div class="row">
-
-                        <div class="col">
-                            <div class="collapse multi-collapse" id="mcvideo">
-                                <div class="card card-body">
-                                    <video width="640" height="360" controls="false">
-                                        <source id="video"
-                                            src="https://kingsleague-cdn.kama.football/account/production/team/video/LOOP%20KINGS%201K%20FC_v1.mp4"
-                                            type="video/mp4">
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="collapse multi-collapse" id="mcposter">
-                                <div class="card card-body">
-                                    <img class="card-img-top" id="poster"
-                                        src="https://cms-es.kingsleague.pro/wp-content/uploads/2024/01/KL-1K.jpg"
-                                        alt="Poster" />
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col">
-                        <div class="collapse multi-collapse" id="mcentrenador">
-                            <div class="card card-body" id="entrenador">
-                                <img class="card-img-top"
-                                    src="https://s3.eu-central-2.wasabisys.com/kingsleague-cdn.kama.football/account/production/staff/911257481.png"
-                                    alt="Title" />
-                                <p class="card-text">Entrenador</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="collapse multi-collapse" id="mcpresidente">
-                            <div class="card card-body" id="presidente">
-                                <img class="card-img-top"
-                                    src="https://s3.eu-central-2.wasabisys.com/kingsleague-cdn.kama.football/account/production/staff/429468257.png"
-                                    alt="Title" />
-                                <p class="card-text">Presi</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="collapse multi-collapse" id="mcmas">
-                            <div class="card card-body" id="mas">
-                                <p class="card-text">El equipo tiene un presupuesto de 10 euros</p>
-                                <p class="card-text">usa la abreviatura jajdfñlaisdfhasd </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+          
         </div>
 
         </div>
@@ -140,6 +52,99 @@
     <footer>
         <!-- place footer here -->
     </footer>
+    
+    <template id="plantilla">
+      <div class="col-sm-6 col-md-4 col-xl-3 d-flex mt-3">
+
+          <div class="card flex-fill ">
+              <img class="card-img-top logo" 
+                  src="https://kingsleague-cdn.kama.football/account/production/team/image/398917228.png"
+                  alt="Title" />
+
+              <div class="card-body">
+                  <h5 class="card-title">Equipo de futbooool</h5>
+
+              </div>
+              <div class="d-flex justify-content-center">
+                  <div class="card-group">
+                      <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#mcvideo" aria-expanded="false" aria-controls="mcvideo">Video</button>
+                      <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#mcposter" aria-expanded="false"
+                          aria-controls="mcposter">Poster</button>
+                      <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#mcpresidente" aria-expanded="false"
+                          aria-controls="mcpresidente">Presidente</button>
+                      <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#mcentrenador" aria-expanded="false"
+                          aria-controls="mcentrenador">Entrenador</button>
+                      <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#mcmas" aria-expanded="false" aria-controls="mcmas">más</button>
+                      <!-- button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                  data-bs-target=".multi-collapse" aria-expanded="false"
+                  aria-controls="mcvideo mcentrenador mcposter mcpresidente">ocultar todo</button -->
+
+                  </div>
+              </div>
+              <div class="row">
+
+                  <div class="col">
+                      <div class="collapse multi-collapse" id="mcvideo">
+                          <div class="card card-body">
+                              <video width="640" height="360" controls="false">
+                                  <source
+                                      src="https://kingsleague-cdn.kama.football/account/production/team/video/LOOP%20KINGS%201K%20FC_v1.mp4"
+                                      type="video/mp4">
+                              </video>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="collapse multi-collapse" id="mcposter">
+                          <div class="card card-body">
+                              <img class="card-img-top"
+                                  src="https://cms-es.kingsleague.pro/wp-content/uploads/2024/01/KL-1K.jpg"
+                                  alt="Poster" />
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="col">
+                  <div class="collapse multi-collapse" id="mcentrenador">
+                      <div class="card card-body" >
+                          <img class="card-img-top"
+                              src="https://s3.eu-central-2.wasabisys.com/kingsleague-cdn.kama.football/account/production/staff/911257481.png"
+                              alt="Title" />
+                          <p class="card-text">Entrenador</p>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="collapse multi-collapse" id="mcpresidente">
+                      <div class="card card-body" >
+                          <img class="card-img-top"
+                              src="https://s3.eu-central-2.wasabisys.com/kingsleague-cdn.kama.football/account/production/staff/429468257.png"
+                              alt="Title" />
+                          <p class="card-text">Presi</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="collapse multi-collapse" id="mcmas">
+                      <div class="card card-body">
+                          <p class="card-text">El equipo tiene un presupuesto de 10 euros</p>
+                          <p class="card-text">usa la abreviatura jajdfñlaisdfhasd </p>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+    </template>
+    
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
