@@ -14,10 +14,13 @@ fetch("./data/heroes.json")
   })
   .then((jsondata) => {
     console.log(jsondata);
-    procesarJSON(jsondata);
+    renderCards(jsondata);
   })
   .catch((e) => {
     console.log(e);
   });
 
-function renderCards(jsondata) {}
+function renderCards(jsondata) {
+  for (let char of jsondata.data.results) {
+  }
+}
