@@ -8,13 +8,16 @@
  * Escribir vuestro código en la función procesarJSON
  */
 
-fetch("./data/team.json")
+fetch("./data/heroes.json")
   .then((response) => {
     return response.json();
   })
-  .then((jsondata) => procesarJSON(jsondata))
+  .then((jsondata) => {
+    console.log(jsondata);
+    procesarJSON(jsondata);
+  })
   .catch((e) => {
     console.log(e);
   });
 
-function procesarJSON(jsondata) {}
+function renderCards(jsondata) {}
