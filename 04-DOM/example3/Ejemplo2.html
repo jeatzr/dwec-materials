@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">King of Legends</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" aria-current="page">Home
+                                <span class="visually-hidden">(current)</span></a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex my-2 my-lg-0">
+                        <input class="form-control me-sm-2" type="text" placeholder="Search" />
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <div class="row" id="contenedor">
+            <div class="col-sm-6 col-md-4 col-xl-3 d-flex" id="plantilla">
+
+                <div class="card flex-fill ">
+                    <img class="card-img-top" id="imagen"
+                        src="https://kingsleague-cdn.kama.football/account/production/team/image/398917228.png"
+                        alt="Title" />
+
+                    <div class="card-body">
+                        <h5 class="card-title" id="nombre">Equipo de futbooool</h5>
+
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="card-group">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mcvideo" aria-expanded="false" aria-controls="mcvideo">Video</button>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mcposter" aria-expanded="false"
+                                aria-controls="mcposter">Poster</button>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mcpresidente" aria-expanded="false"
+                                aria-controls="mcpresidente">Presidente</button>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mcentrenador" aria-expanded="false"
+                                aria-controls="mcentrenador">Entrenador</button>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mcmas" aria-expanded="false" aria-controls="mcmas">más</button>
+                            <!-- button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                        data-bs-target=".multi-collapse" aria-expanded="false"
+                        aria-controls="mcvideo mcentrenador mcposter mcpresidente">ocultar todo</button -->
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="mcvideo">
+                                <div class="card card-body">
+                                    <video width="640" height="360" controls="false">
+                                        <source id="video"
+                                            src="https://kingsleague-cdn.kama.football/account/production/team/video/LOOP%20KINGS%201K%20FC_v1.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="mcposter">
+                                <div class="card card-body">
+                                    <img class="card-img-top" id="poster"
+                                        src="https://cms-es.kingsleague.pro/wp-content/uploads/2024/01/KL-1K.jpg"
+                                        alt="Poster" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="mcentrenador">
+                            <div class="card card-body" id="entrenador">
+                                <img class="card-img-top"
+                                    src="https://s3.eu-central-2.wasabisys.com/kingsleague-cdn.kama.football/account/production/staff/911257481.png"
+                                    alt="Title" />
+                                <p class="card-text">Entrenador</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="mcpresidente">
+                            <div class="card card-body" id="presidente">
+                                <img class="card-img-top"
+                                    src="https://s3.eu-central-2.wasabisys.com/kingsleague-cdn.kama.football/account/production/staff/429468257.png"
+                                    alt="Title" />
+                                <p class="card-text">Presi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="mcmas">
+                            <div class="card card-body" id="mas">
+                                <p class="card-text">El equipo tiene un presupuesto de 10 euros</p>
+                                <p class="card-text">usa la abreviatura jajdfñlaisdfhasd </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                $('.collapse.show').collapse('hide');
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="./codigo.js"></script>
+</body>
+
+</html>
