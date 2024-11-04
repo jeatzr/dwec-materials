@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Custom validation logic
     // Example custom validation just checking the logic
     if (name.value.trim().length < 2) {
-      markFieldAsNotValid(name);
+      markFieldAsNotValid(name, "Input a name 2 or more characters long.");
       isValid = false;
     } else {
       markFieldAsValid(name);

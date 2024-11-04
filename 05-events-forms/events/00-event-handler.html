@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#">
+      <label for="new-item">New Item:</label>
+      <input id="new-item" type="text" />
+      <button>Add Item</button>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+      <p>The item pressed content is: <span id="item-pressed"></span></p>
+    </form>
+  </body>
+
+  <script>
+    const newItemBtn = document.querySelector("form button");
+    const newItemInput = document.querySelector("#new-item");
+    const list = document.querySelector("form ul");
+    const pressedItem = document.querySelector("#item-pressed");
+
+    newItemBtn.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      console.log(ev);
+      const newItem = newItemInput.value;
+      if (newItem) {
+        const newLi = document.createElement("li");
+        newLi.textContent = newItem;
+        list.append(newLi);
+        newItemInput.value = "";
+      } else {
+        console.log("there is no item");
+      }
+    });
+
+    list.addEventListener("click", function (event) {
+      if (event.target.tagName === "LI") {
+        console.log("Clicked on:", event.target.textContent);
+        pressedItem.textContent = event.target.textContent;
+      }
+    });
+  </script>
+</html>

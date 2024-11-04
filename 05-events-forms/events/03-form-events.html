@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Events Example</title>
+    <style>
+      .log-container {
+        margin-top: 20px;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Events Example</title>
-  <style>
-    .log-container {
-      margin-top: 20px;
-    }
+      .log {
+        font-family: monospace;
+        background-color: #f4f4f4;
+        border: 1px solid #ccc;
+        padding: 10px;
+        max-height: 200px;
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
 
-    .log {
-      font-family: monospace;
-      background-color: #f4f4f4;
-      border: 1px solid #ccc;
-      padding: 10px;
-      max-height: 200px;
-      overflow-y: scroll;
-    }
-  </style>
-</head>
+  <body>
+    <h2>Form Events Example</h2>
+    <form id="myForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" /><br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" /><br /><br />
+      <button type="submit">Submit</button>
+    </form>
 
-<body>
-  <h2>Form Events Example</h2>
-  <form id="myForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name"><br><br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email"><br><br>
-    <button type="submit">Submit</button>
-  </form>
+    <div class="log-container">
+      <h3>Event Log</h3>
+      <div class="log" id="event-log"></div>
+    </div>
 
-  <div class="log-container">
-    <h3>Event Log</h3>
-    <div class="log" id="event-log"></div>
-  </div>
+    <script>
+      const form = document.getElementById("myForm");
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const eventLog = document.getElementById("event-log");
 
-  <script>
-    const form = document.getElementById('myForm');
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const eventLog = document.getElementById('event-log');
+      // Function to log events
+      function logEvent(eventType, eventTarget) {
+        const logEntry = document.createElement("div");
+        logEntry.textContent = `${eventType} on ${eventTarget}`;
+        eventLog.appendChild(logEntry);
+        eventLog.scrollTop = eventLog.scrollHeight; // Scroll to the bottom
+      }
 
-    // Function to log events
-    function logEvent(eventType, eventTarget) {
-      const logEntry = document.createElement('div');
-      logEntry.textContent = `${eventType} on ${eventTarget}`;
-      eventLog.appendChild(logEntry);
-      eventLog.scrollTop = eventLog.scrollHeight; // Scroll to the bottom
-    }
+      // Adding event listeners for form events
+      form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent form submission
+        logEvent("submit", "form");
+      });
 
-    // Adding event listeners for form events
-    form.addEventListener('submit', (event) => {
-      event.preventDefault(); // Prevent form submission
-      logEvent('submit', 'form');
-    });
+      nameInput.addEventListener("focus", () =>
+        logEvent("focus", "name input")
+      );
+      nameInput.addEventListener("blur", () => logEvent("blur", "name input"));
 
-    nameInput.addEventListener('focus', () => logEvent('focus', 'name input'));
-    nameInput.addEventListener('blur', () => logEvent('blur', 'name input'));
-
-    emailInput.addEventListener('focus', () => logEvent('focus', 'email input'));
-    emailInput.addEventListener('blur', () => logEvent('blur', 'email input'));
-  </script>
-</body>
-
+      emailInput.addEventListener("focus", () =>
+        logEvent("focus", "email input")
+      );
+      emailInput.addEventListener("blur", () =>
+        logEvent("blur", "email input")
+      );
+    </script>
+  </body>
 </html>

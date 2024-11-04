@@ -1,96 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New HTML5 Form Elements</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New HTML5 Form Elements</title>
+    <link rel="stylesheet" href="00-style.css" />
+  </head>
 
-  <link rel="stylesheet" href="00-style.css">
-</head>
-
-<body>
-  <div class="container">
-    <form action="./fake.php" method="get">
-      <!-- It's a good idea to group the label and input control within the same div,
+  <body>
+    <div class="container">
+      <form action="./fake.php" method="get">
+        <!-- It's a good idea to group the label and input control within the same div,
             and ensure that the 'for' attribute of the label matches the 'id' of the input.
             The 'name' property will be used to send the value. -->
 
-      <h2>HTML5 Input Controls</h2>
-      <div class="form-group">
-        <label for="email">E-mail:</label>
-        <input type="email" name="email" id="email" autofocus>
-      </div>
-      <div class="form-group">
-        <label for="search">Search:</label>
-        <input type="search" name="search" id="search">
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone:</label>
-        <input type="tel" name="phone" id="phone">
-      </div>
-      <div class="form-group">
-        <label for="website">Enter URL:</label>
-        <input type="url" name="website" id="website">
-      </div>
-      <div class="form-group">
-        <label for="age">Enter age:</label>
-        <input type="number" name="age" id="age" min="1" max="10" step="2">
-      </div>
+        <h2>HTML5 Input Controls</h2>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" name="email" id="email" autofocus />
+        </div>
+        <div class="form-group">
+          <label for="search">Search:</label>
+          <input type="search" name="search" id="search" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" name="phone" id="phone" />
+        </div>
+        <div class="form-group">
+          <label for="website">Enter URL:</label>
+          <input type="url" name="website" id="website" />
+        </div>
+        <div class="form-group">
+          <label for="age">Enter age:</label>
+          <input type="number" name="age" id="age" min="1" max="10" step="2" />
+        </div>
 
-      <div class="form-group">
-        <label for="house_price">Choose a maximum house price: </label>
-        <input type="range" name="house_price" id="house_price" min="50000" max="500000" step="100" value="250000">
-        <output class="price-output" for="house_price"></output>
-      </div>
-      <div class="form-group">
-        <label for="datetime">Date and time:</label>
-        <input type="datetime-local" name="datetime" id="datetime">
-      </div>
-      <div class="form-group">
-        <label for="month">Month:</label>
-        <input type="month" name="month" id="month">
-      </div>
-      <div class="form-group">
-        <label for="time">Time:</label>
-        <input type="time" name="time" id="time">
-      </div>
-      <div class="form-group">
-        <label for="week">Week:</label>
-        <input type="week" name="week" id="week">
-      </div>
-      <div class="form-group">
-        <label for="summer_availability">When are you available this summer?</label>
-        <input type="date" name="summer_availability" min="2025-05-31" max="2025-08-31" step="7"
-          id="summer_availability">
-      </div>
-      <div class="form-group">
-        <label for="color">Select a color:</label>
-        <input type="color" name="color" id="color">
-      </div>
+        <div class="form-group">
+          <label for="house_price">Choose a maximum house price: </label>
+          <input
+            type="range"
+            name="house_price"
+            id="house_price"
+            min="50000"
+            max="500000"
+            step="100"
+            value="250000"
+          />
+          <output class="price-output" for="house_price"></output>
+        </div>
+        <div class="form-group">
+          <label for="datetime">Date and time:</label>
+          <input type="datetime-local" name="datetime" id="datetime" />
+        </div>
+        <div class="form-group">
+          <label for="month">Month:</label>
+          <input type="month" name="month" id="month" />
+        </div>
+        <div class="form-group">
+          <label for="time">Time:</label>
+          <input type="time" name="time" id="time" />
+        </div>
+        <div class="form-group">
+          <label for="week">Week:</label>
+          <input type="week" name="week" id="week" />
+        </div>
+        <div class="form-group">
+          <label for="summer_availability"
+            >When are you available this summer?</label
+          >
+          <input
+            type="date"
+            name="summer_availability"
+            min="2025-05-31"
+            max="2025-08-31"
+            step="7"
+            id="summer_availability"
+          />
+        </div>
+        <div class="form-group">
+          <label for="color">Select a color:</label>
+          <input type="color" name="color" id="color" />
+        </div>
 
-      <div class="form-group">
-        <button type="submit">Submit data</button>
-      </div>
+        <div class="form-group">
+          <button type="submit">Submit data</button>
+        </div>
+      </form>
+    </div>
 
-    </form>
-  </div>
+    <script>
+      // This code is necessary to display the value of the range input in the output
+      const price = document.querySelector("#house_price");
+      const output = document.querySelector(".price-output");
 
-  <script>
-
-    // This code is necessary to display the value of the range input in the output
-    const price = document.querySelector('#house_price');
-    const output = document.querySelector('.price-output');
-
-    output.textContent = price.value;
-
-    price.addEventListener('input', function () {
       output.textContent = price.value;
-    });
 
-  </script>
-
-</body>
-
+      price.addEventListener("input", function () {
+        output.textContent = price.value;
+      });
+    </script>
+  </body>
 </html>
