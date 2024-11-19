@@ -1,7 +1,11 @@
-GET https://pokeapi.co/api/v2/pokemon/ditto HTTP/1.1
+GET https://pokeapi.co/api/v2/pokemon/pikachu HTTP/1.1
 
 ###
 GET https://pokeapi.co/api/v2/ability/battle-armor HTTP/1.1
 
 ###
 GET https://pokeapi.co/api/v2/pokemon HTTP/1.1
+
+###
+GET https://randomuser.me/api/?results=5 HTTP/1.1
+

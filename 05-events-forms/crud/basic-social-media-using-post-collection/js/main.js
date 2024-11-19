@@ -103,6 +103,7 @@ form.addEventListener("submit", (e) => {
 });
 
 postsDiv.addEventListener("click", (ev) => {
+  console.log("Click inside posts div");
   const actionBtn = ev.target;
   if (actionBtn.classList.contains("fa-edit")) {
     editPost(actionBtn.dataset.id);

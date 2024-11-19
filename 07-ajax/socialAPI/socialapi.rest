@@ -1,0 +1,30 @@
+### Get all posts
+GET http://localhost:3000/posts HTTP/1.1 
+
+### Get post with id 2
+GET http://localhost:3000/posts/3 HTTP/1.1 
+
+### Add a new POST with POST
+POST http://localhost:3000/posts HTTP/1.1 
+content-type: application/json
+
+{
+    "title": "Hi there", "author": "Me" ,
+    "text": "Hi there"
+}
+### Update a post
+PUT http://localhost:3000/posts/a117 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Hi Everybody!!",
+    "author": "Me",
+    "text": "Hi there"
+}
+
+### delete post b998
+DELETE http://localhost:3000/posts/b998 HTTP/1.1
+
+
+###
+GET http://172.20.99.1:3000/posts HTTP/1.1 
