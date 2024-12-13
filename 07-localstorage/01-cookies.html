@@ -8,7 +8,7 @@
   <body>
     <h1>Testing Cookies Functions</h1>
     <p>Please Inspect the cookies and show the console</p>
-    <script type="module">
+    <!-- <script type="module">
       // importing the cookie management funtions
       import { setCookie, getCookie, eraseCookie } from "./cookies.js";
 
@@ -49,6 +49,31 @@
 
       console.log(document.cookie);
       console.log(`Cookie: persistentCookie=${persistentCookie}`);
+    </script> -->
+
+    <script type="module">
+      import { setCookie, getCookie, eraseCookie } from "./cookies.js";
+
+      // creating a session cookie in a simple way
+      document.cookie = "sessionCookie=I will die if you close the browser!";
+
+      // Set a cookie with an expiration date
+      const now = new Date();
+      const time = now.getTime();
+      const expireTime = time + 7 * 24 * 60 * 60 * 1000; // 7 days from now
+      now.setTime(expireTime);
+
+      document.cookie = `username=JohnDoe; expires=${now.toUTCString()}; path=/`;
+
+      setCookie("nightMode", "true", 30);
+      setCookie("colorPallet", "red", 30);
+
+      let value = getCookie("nightMode");
+      console.log("VAlue of Nightmode: " + value);
+
+      eraseCookie("colorPallet");
+
+      console.log(document.cookie);
     </script>
   </body>
 </html>
