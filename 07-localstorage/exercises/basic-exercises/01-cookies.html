@@ -23,7 +23,26 @@
           <option value="cyan">Cyan</option>
         </select>
         <button type="submit">Send</button>
+        <button type="button">Delete all cookies</button>
       </form>
     </div>
   </body>
+  <script type="module">
+    import { getCookie, setCookie, eraseCookie } from "./cookies.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const spanName = document.getElementById("span-nombre");
+      const spanColor = document.getElementById("span-color");
+      const inputName = document.getElementById("name");
+      const inputColor = document.getElementById("color");
+      const form = document.getElementById("datos");
+
+      const username = getCookie("username");
+      spanName.textContent = username;
+
+      form.addEventListener("submit", (ev) => {
+        setCookie("username", inputName.value, 7);
+      });
+    });
+  </script>
 </html>
