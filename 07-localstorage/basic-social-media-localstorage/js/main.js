@@ -33,6 +33,9 @@ const deletePost = (id) => {
   console.log("Delete post: " + id);
   postList.deletePost(id);
   displayPosts(postList.getAllPosts());
+  // Update local storage
+  localStorage.setItem("posts", JSON.stringify(postList.getAllPosts()));
+  2;
 };
 
 const editPost = (id) => {
@@ -57,6 +60,8 @@ const updatePost = (postId) => {
   editFlag = false;
   formButton.textContent = "Post";
   displayPosts(postList.getAllPosts());
+  // Update local storage
+  localStorage.setItem("posts", JSON.stringify(postList.getAllPosts()));
 };
 
 function displayPosts(posts) {
