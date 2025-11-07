@@ -39,7 +39,9 @@
       }
     });
 
+    // add a event delegation on the UL to capture events in all the LI
     list.addEventListener("click", function (event) {
+      // this if is for filtering only clicks on li items
       if (event.target.tagName === "LI") {
         console.log("Clicked on:", event.target.textContent);
         pressedItem.textContent = event.target.textContent;

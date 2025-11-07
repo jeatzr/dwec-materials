@@ -77,10 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ///////////////////////////////////////////
 
   // This functions set a field as not-valid and adds the error-message
-  function markFieldAsNotValid(
-    element,
-    message = "Invalid field. Insert a valid value."
-  ) {
+  function markFieldAsNotValid(element, message) {
     // If we have a custom message we show it. In other case we just show the error-message present in the HTML
     if (message) {
       element.parentNode.querySelector(".error-message").textContent = message;

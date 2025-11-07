@@ -3,8 +3,8 @@
 ## Guidelines
 
 This practice will be carried out in groups of 2 people and must be presented in class.  
-**Delivery date:** December 9.  
-**Defenses:** December 11.
+**Delivery date:** November 21.  
+**Defenses:** November 24.
 
 The objective is to create an **APP** that accesses a **Public REST API** and, using JavaScript and the methods covered in class, retrieves various data provided by the API with different methods and filters to finally render them on the screen.  
 It will be appreciated if you also access a **Private REST API** (using `json-server`) to perform write operations without any issues.  

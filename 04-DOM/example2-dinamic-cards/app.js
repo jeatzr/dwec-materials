@@ -26,7 +26,7 @@ function renderCharactersInnerHTML(characters) {
   }
 }
 
-//  renderCharactersInnerHTML(characters);
+// renderCharactersInnerHTML(characters);
 
 function renderCharactersTemplate(characters) {
   for (let char of characters) {

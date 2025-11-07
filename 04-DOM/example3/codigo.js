@@ -18,6 +18,7 @@ const cardRow = document.querySelector(".row");
 
 function renderTeams(jsondata) {
   const template = document.getElementById("plantilla").content; //en teoria lo recuperamos aqui, HABRÍA QUE CONTROLAR QUE SI NO ENCUENTRA NADA.....
+  console.log(plantilla);
 
   for (team of jsondata.teams) {
     let card = template.cloneNode(true);

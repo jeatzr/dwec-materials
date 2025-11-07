@@ -66,6 +66,14 @@
       emailInput.addEventListener("blur", () =>
         logEvent("blur", "email input")
       );
+
+      nameInput.addEventListener("change", () => {
+        logEvent("change", "name input");
+      });
+
+      emailInput.addEventListener("change", () => {
+        logEvent("change", "email input");
+      });
     </script>
   </body>
 </html>

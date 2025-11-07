@@ -6,9 +6,7 @@ const msg = document.getElementById("msg");
 const tasks = document.getElementById("tasks");
 const add = document.getElementById("add");
 
-
 let data = [];
-
 
 // Add event listener for form submission
 form.addEventListener("submit", (e) => {
@@ -38,18 +36,18 @@ function hideModalFunc() {
 
 // Define form validation function
 let formValidation = () => {
-  if (textInput.value === "") { // If text input field is empty
+  if (textInput.value === "") {
+    // If text input field is empty
     console.log("failure");
     msg.innerHTML = "Task cannot be blank"; // Display error message
     return false; // Validation fails
-  } else { // If text input field is not empty
+  } else {
+    // If text input field is not empty
     console.log("success");
     msg.innerHTML = ""; // Clear error message
     return true; // Validation succeeds
   }
 };
-
-
 
 let acceptData = () => {
   data.push({
@@ -65,27 +63,30 @@ let acceptData = () => {
 };
 
 let renderTasks = () => {
-  tasks.innerHTML = data.map((task, index) =>
-  (`<div id=${index}>
+  console.log("rendering");
+  tasks.innerHTML = data
+    .map(
+      (task, index) => `<div id=${index}>
           <span class="fw-bold">${task.text}</span>
           <span class="small text-secondary">${task.date}</span>
           <p>${task.description}</p>
   
           <span class="options">
             <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
-            <i onClick ="deleteTask(this);renderTasks()" class="fas fa-trash-alt"></i>
+            <i onClick ="deleteTask(this)" class="fas fa-trash-alt"></i>
           </span>
       </div>
-    `)
-  ).join("");
+    `
+    )
+    .join("");
 };
 
 let deleteTask = (e) => {
-  e.parentElement.parentElement.remove();
+  // e.parentElement.parentElement.remove();
   data.splice(e.parentElement.parentElement.id, 1);
   localStorage.setItem("data", JSON.stringify(data));
   console.log(data);
-
+  renderTasks();
 };
 
 let editTask = (e) => {
@@ -105,7 +106,7 @@ let resetForm = () => {
 };
 
 (() => {
-  data = JSON.parse(localStorage.getItem("data")) || []
+  data = JSON.parse(localStorage.getItem("data")) || [];
   console.log(data);
   renderTasks();
 })();

@@ -68,6 +68,13 @@ console.log(cards);
 //   cardTitle.textContent = "Goku";
 // }
 
-const imgCard3 = cards[3].querySelector("img");
+const cardsArray = Array.from(cards);
 
-// imgCard3.src = "img/bobo.jpg";
+cardsArray.forEach((element) => {
+  const img = element.querySelector("img");
+  img.src = "img/bubu.jpg";
+});
+
+const imgCard3 = cards[2].querySelector("img");
+
+imgCard3.src = "img/bobo.jpg";

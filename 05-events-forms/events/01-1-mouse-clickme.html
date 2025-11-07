@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Mouse Events Example</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        margin: 50px;
+        cursor: pointer;
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box" id="box">Click me</div>
+
+    <script>
+      const box = document.getElementById("box");
+
+      box.addEventListener("click", () => {
+        box.style.backgroundColor = "#e74c3c";
+        box.innerText = "Clicked!";
+      });
+
+      box.addEventListener("mouseover", () => {
+        //box.style.backgroundColor = '#2ecc71';
+        // get dimensions of window
+        const maxWidth = window.innerWidth;
+        const maxHeight = window.innerHeight;
+        // calculate a random X and Y
+        const newX = Math.abs(Math.random() * maxWidth);
+        const newY = Math.abs(Math.random() * maxHeight);
+        // update the absolute position of the box
+
+        console.log(newX, newY);
+        box.style.position = "absolute";
+        box.style.top = newY + "px";
+        box.style.left = newX + "px";
+      });
+
+      box.addEventListener("mouseout", () => {
+        box.style.backgroundColor = "#3498db";
+        box.innerText = "Click me";
+      });
+
+      document.addEventListener("click", (e) => {
+        console.log(`Coordinate X: ${e.clientX}, Y: ${e.clientY}`);
+      });
+    </script>
+  </body>
+</html>

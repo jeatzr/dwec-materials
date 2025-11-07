@@ -104,9 +104,12 @@ form.addEventListener("submit", (e) => {
 
 postsDiv.addEventListener("click", (ev) => {
   console.log("Click inside posts div");
+  console.log(ev.target);
   const actionBtn = ev.target;
+  // this case is when you click on the edit button
   if (actionBtn.classList.contains("fa-edit")) {
     editPost(actionBtn.dataset.id);
+    // this case is when you click on the delete button
   } else if (actionBtn.classList.contains("fa-trash-alt")) {
     deletePost(actionBtn.dataset.id);
   }
