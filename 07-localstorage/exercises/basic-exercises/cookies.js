@@ -16,6 +16,7 @@ export function setCookie(name, value, days = null, path = "/") {
 
 // Helper function to decode cookie value
 function decodeCookie(value) {
+  if (!value) return "";
   return decodeURIComponent(value.replace(/\+/g, " "));
 }
 

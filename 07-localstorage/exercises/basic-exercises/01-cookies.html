@@ -27,20 +27,19 @@
       </form>
     </div>
   </body>
+
   <script type="module">
-    import { getCookie, setCookie, eraseCookie } from "./cookies.js";
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const spanName = document.getElementById("span-nombre");
-      const spanColor = document.getElementById("span-color");
-      const inputName = document.getElementById("name");
-      const inputColor = document.getElementById("color");
+    import { setCookie, getCookie } from "./cookies.js";
+    document.addEventListener("DOMContentLoaded", (e) => {
       const form = document.getElementById("datos");
+      const inputName = document.getElementById("name");
+      const spanName = document.getElementById("span-nombre");
 
-      const username = getCookie("username");
-      spanName.textContent = username;
+      //read the username coookie
+      const userName = getCookie("username");
+      spanName.textContent = userName;
 
-      form.addEventListener("submit", (ev) => {
+      form.addEventListener("submit", (e) => {
         setCookie("username", inputName.value, 7);
       });
     });
