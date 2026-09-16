@@ -14,8 +14,9 @@ Each team (composed of two students) must define the requirements of their appli
 
 The project should be structured as follows:
 
-- **routes/** – Contains all route components.
+- **router/** – Contains the definition of the router including the `index.tsx` that define the routes and also a folder with the loaders. 
 - **layout/** – Holds different layout components.
+- **pages/** - Holds the different pages components.
 - **components/** – Includes atomic, molecular, and organism components, organized either by **type** or **feature**.
 - **services/** – Contains libraries for API requests.
 - **types/** – Stores TypeScript interfaces defining the data formats used in the application.
@@ -28,7 +29,7 @@ The project should include a variety of component types:
 - **Molecular Components** – Combinations of atomic components forming reusable UI elements.
 - **Organism Components** – More complex UI sections composed of multiple molecular components.
 - **Layout Components** – Defines the overall structure of the application.
-- **Route Components** – Pages that define different views within the application.
+- **Page Components** – Pages that define different views within the application.
 
 ### Routing & API Requirements
 
