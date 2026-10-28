@@ -39,3 +39,4 @@ function renderCharactersTemplate(characters) {
 }
 
 renderCharactersTemplate(characters);
+//renderCharactersInnerHTML(characters);

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -50,7 +50,7 @@
         } else {
           markFieldAsNotValid(
             dni2,
-            "Input a valid DNI. The letter don't match."
+            "Input a valid DNI. The letter don't match.",
           );
           valid = false;
         }
@@ -103,7 +103,7 @@
       // This functions set a field as not-valid and adds the error-message
       function markFieldAsNotValid(
         element,
-        message = "Invalid field. Insert a valid value."
+        message = "Invalid field. Insert a valid value.",
       ) {
         // If we have a custom message we show it. In other case we just show the error-message present in the HTML
         if (message) {

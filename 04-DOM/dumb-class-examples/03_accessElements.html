@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -47,6 +47,8 @@
       for (li of elementsByTagName) {
         li.classList.add("highlight");
       }
+
+      elementsByTagName[3].classList.remove("highlight");
 
       for (header of allHeaders) {
         header.classList.add("red");

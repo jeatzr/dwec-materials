@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -37,6 +37,24 @@
       counter--; // counter is now 0
 
       //operaciones lógicas de comparación
+
+      let a = 5;
+      console.log(5 == 5); // true
+      console.log(5 == "5"); //true
+      console.log(5 === "5"); //false
+      console.log(5 === 5); //true
+      console.log(5 === a); //true
+
+      // integer division
+
+      let num1 = 10;
+      let num2 = 3;
+
+      let int_division = Math.floor(num1 / num2);
+      let reminder = num1 % num2;
+
+      console.log(int_division);
+      console.log(reminder);
     </script>
   </body>
 </html>

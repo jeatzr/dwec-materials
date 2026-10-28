@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -56,15 +56,15 @@
       });
 
       nameInput.addEventListener("focus", () =>
-        logEvent("focus", "name input")
+        logEvent("focus", "name input"),
       );
       nameInput.addEventListener("blur", () => logEvent("blur", "name input"));
 
       emailInput.addEventListener("focus", () =>
-        logEvent("focus", "email input")
+        logEvent("focus", "email input"),
       );
       emailInput.addEventListener("blur", () =>
-        logEvent("blur", "email input")
+        logEvent("blur", "email input"),
       );
 
       nameInput.addEventListener("change", () => {
