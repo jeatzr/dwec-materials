@@ -1,0 +1,18 @@
+### Get all the posts
+
+GET https://jsonplaceholder.typicode.com/posts
+
+
+### Get a single post id=4
+
+GET https://jsonplaceholder.typicode.com/posts/4
+
+### Get a single post non existing
+
+GET https://jsonplaceholder.typicode.com/posts/4664
+
+
+### Get a single user
+
+GET https://jsonplaceholder.typicode.com/users/3
+
